@@ -1,1 +1,7 @@
 GeoNode~=4.2.3
+
+git+https://github.com/adilhussain540/django-media-fixtures@django-4-fixes
+
+sentry-sdk
+sentry-sdk[celery]
+sentry-sdk[django]

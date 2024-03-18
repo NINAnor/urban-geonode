@@ -38,7 +38,8 @@ RUN chmod +x /usr/bin/celery-cmd
 #     cd /usr/src/geonode-contribs/ldap; pip install --upgrade  -e .
 
 RUN yes w | pip install --src /usr/src -r requirements.txt &&\
-    yes w | pip install -e .
+    yes w | pip install -e . &&\
+    yes w | pip uninstall redis
 
 # Cleanup apt update lists
 RUN apt-get autoremove --purge &&\
