@@ -358,6 +358,7 @@ def statics(ctx):
             f"python manage.py collectstatic --noinput --settings={_localsettings()}",
             pty=True,
         )
+        ctx.run(f"python manage.py collectmedia --noinput --settings={_localsettings()}")
     except Exception:
         import traceback
 
@@ -393,6 +394,11 @@ def fixtures(ctx):
     )
     ctx.run(
         f"python manage.py loaddata initial_data.json \
+--settings={_localsettings()}",
+        pty=True,
+    )
+    ctx.run(
+        f"python manage.py loaddata /usr/src/urban/fixtures/theme.json \
 --settings={_localsettings()}",
         pty=True,
     )
