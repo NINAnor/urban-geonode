@@ -1,3 +1,9 @@
 -e git+https://github.com/GeoNode/geonode-mapstore-client.git@master#egg=django_geonode_mapstore_client
 -e git+https://github.com/GeoNode/geonode-importer.git@master#egg=geonode-importer
 -e git+https://github.com/GeoNode/geonode.git@master#egg=GeoNode
+
+git+https://github.com/adilhussain540/django-media-fixtures@django-4-fixes
+
+sentry-sdk
+sentry-sdk[celery]
+sentry-sdk[django]
