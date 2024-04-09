@@ -18,13 +18,10 @@
 #
 #########################################################################
 
+from django.urls import path, include
 from geonode.urls import urlpatterns
 
-"""
-# You can register your own urlpatterns here
+
 urlpatterns = [
-    url(r'^/?$',
-        homepage,
-        name='home'),
- ] + urlpatterns
-"""
+    path('', include('urban.upmigrate.urls')),
+] + urlpatterns
