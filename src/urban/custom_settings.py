@@ -6,6 +6,7 @@ INSTALLED_APPS += (
     'django_media_fixtures',
 )
 
+USE_X_FORWARDED_HOST = True
 
 SENTRY_DSN = os.getenv("SENTRY_DSN", None)
 if SENTRY_DSN:
