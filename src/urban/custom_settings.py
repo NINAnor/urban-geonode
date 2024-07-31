@@ -29,7 +29,7 @@ if SENTRY_DSN:
         dsn=SENTRY_DSN,
         integrations=integrations,
         environment=os.getenv("SENTRY_ENVIRONMENT", "production"),
-        traces_sample_rate=float(os.getenv("SENTRY_TRACES_SAMPLE_RATE", 1.0)),
+        traces_sample_rate=float(os.getenv("SENTRY_TRACES_SAMPLE_RATE", 0.05)),
     )
 
     LOGGING["loggers"]["sentry_sdk"] = {"level": "ERROR", "handlers": ["console"], "propagate": False}
